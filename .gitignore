@@ -1,0 +1,16 @@
+# Project exclude paths
+/.gradle/
+/bom/build/
+/build/
+/common/build/
+/common/out/
+/common/out/production/classes/
+/gotrue-kt/build/
+/gotrue-kt/out/
+/gotrue-kt/out/production/classes/
+/postgrest-kt/build/
+/postgrest-kt/out/
+/postgrest-kt/out/production/classes/
+/supabase-kt/build/
+/supabase-kt/out/
+/supabase-kt/out/production/classes/

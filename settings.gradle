@@ -1,0 +1,7 @@
+rootProject.name = "supabase-kt"
+
+include "bom"
+include "common"
+include "gotrue-kt"
+include "postgrest-kt"
+include "supabase-kt"
