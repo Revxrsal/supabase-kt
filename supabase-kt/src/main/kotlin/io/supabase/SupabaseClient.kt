@@ -46,6 +46,7 @@ class SupabaseClient(
         authorization = authorization,
         serviceRole = authSettings.serviceRole,
         persistSessions = authSettings.persistSessions,
+        headers = authSettings.headers,
         client = client,
         moshi = moshi,
         storage = storage
