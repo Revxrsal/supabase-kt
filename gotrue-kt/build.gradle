@@ -1,3 +1,6 @@
+apply plugin: "kotlin-kapt"
+
 dependencies {
     implementation(project(":common"))
+    kapt("com.squareup.moshi:moshi-kotlin-codegen:1.13.0")
 }
