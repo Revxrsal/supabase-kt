@@ -58,7 +58,7 @@ abstract class JsonClient(
                 return onResponse(it)
             }
             val map = adapter<Map<String, Any>>().fromJson(it)
-            val message = (map["msg"] ?: map["message"] ?: map["error"] ?: map).toString()
+            val message = (map["error_description"] ?: map["message"] ?: map["error"] ?: map["msg"] ?: map).toString()
             throw wrapException(message)
         }
     }
