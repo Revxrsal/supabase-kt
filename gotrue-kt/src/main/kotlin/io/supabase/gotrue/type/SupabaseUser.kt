@@ -31,8 +31,8 @@ import java.util.*
 @JsonClass(generateAdapter = true)
 data class SupabaseUser(
     val id: UUID,
-    @Json(name = "app_metadata") val appMetadata: AppMetadata,
-    @Json(name = "user_metadata") val userMetadata: UserMetadata,
+    @Json(name = "app_metadata") val appMetadata: Map<String, Any> = emptyMap(),
+    @Json(name = "user_metadata") val userMetadata: Map<String, Any> = emptyMap(),
     val aud: String,
     @Json(name = "recovery_sent_at") val recoverySentAt: OffsetDateTime? = null,
     @Json(name = "invited_at") val invitedAt: OffsetDateTime? = null,
@@ -47,15 +47,4 @@ data class SupabaseUser(
     val role: String? = null,
     @Json(name = "updated_at") val updatedAt: OffsetDateTime? = null,
     val identities: List<UserIdentity> = emptyList()
-)
-
-@JsonClass(generateAdapter = true)
-data class AppMetadata(
-    val provider: String? = null,
-    val key: Map<String, Any> = emptyMap()
-)
-
-@JsonClass(generateAdapter = true)
-data class UserMetadata(
-    val key: Map<String, Any> = emptyMap()
 )
