@@ -1,5 +1,0 @@
-dependencies {
-    implementation(project(":common"))
-    implementation(project(":gotrue-kt"))
-    implementation(project(":supabase-kt"))
-}
